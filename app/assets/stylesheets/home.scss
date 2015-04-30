@@ -3,13 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .header-title {
   text-align: center;
-}
-
-.container {
-  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .row {
   margin: 0;
   max-width: 100%;
+}
+
+main {
+  text-align: center;
+}
+
+div.box {
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em;
+}
+
+div.box img {
+  display: inline-block;
+}
+
+div.box a {
+  display: block;
+}
+
+div.topics {
+  border-top: 3px solid black;
 }

@@ -1,25 +1,69 @@
 <header>
   <div class="row header-title">
     <div class="small-12 large-12 column">
-        <h1>Revolution News Network</h1>
+      <h1>Revolution News Network</h1>
     </div>
   </div>
 </header>
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="small-12 large-4 columns">
-        <h2>Inner</h2>
-        <div><a href="#">Testing the columns</a></div>
+  <div class="row">
+    <div class="small-12 large-4 columns">
+      <h2>Inner</h2>
+
+      <a href="#" data-reveal-id="topicModal"><div class="box"><%= image_tag 'prayer.jpg' %>Prayer - Original Text Messaging</div></a>
+      <div id="topicModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <%= image_tag 'prayer.jpg' %>
+        <%= link_to 'Prayer - Original Text Messaging', 'http://www.today.com/news/there-afterlife-does-prayer-work-todays-survey-faith-spirituality-2D80574883', :target => '_blank' %>
       </div>
-      <div class="small-12 large-4 columns">
-        <h2>Revolutions</h2>
-        <div><a href="#">Testing the columns</a></div>
+
+      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
+      <a href="http://www.yahoo.com" target="_blank"><div class="box">Testing a new idea - link to Yahoo</div></a>
+      <div class="topics">
+        <h4>Self Help Topics</h4>
+        <ul class="no-bullet">
+          <li><%= link_to 'Anthony Robbins', 'http://www.tonyrobbins.com/' %></li>
+          <li><%= link_to 'Steven R Covey', 'https://www.stephencovey.com/' %></li>
+          <li><%= link_to 'Louise Hay', 'http://www.louisehay.com/' %></li>
+          <li><%= link_to 'Robert Green', 'http://powerseductionandwar.com/' %></li>
+        </ul>
       </div>
-      <div class="small-12 large-4 columns">
-        <h2>Outer</h2>
-        <div><a href="#">Testing the columns</a></div>
+      <div class="topics">
+        <h4>Religion Topics</h4>
+        <ul class="no-bullet">
+          <li><%= link_to 'Christianity - 2,040,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Islam - 1,226,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Catholicism - 1,142,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Hinduism - 828,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Agnosticism - 639,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Buddhism - 367,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Atheism - 150,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Anglicanism - 85,400,000 Followers', '#' %></li>
+          <li><%= link_to 'Sikhism - 23,800,000 Followers', '#' %></li>
+          <li><%= link_to 'Seventh-Day Adventists - 16,000,000 Followers', '#' %></li>
+          <li><%= link_to 'Mormonism - 15,000,000 Followers', '#' %></li>
+        </ul>
       </div>
+      <div class="topics">
+        <h4>Spirituality Topics</h4>
+        <ul class="no-bullet">
+          <li><%= link_to 'Anthony de Mello', 'http://www.demellospirituality.com/#' %></li>
+          <li><%= link_to 'Eckhart Tolle', 'http://www.eckharttolle.com/' %></li>
+          <li><%= link_to 'Adyashanti', 'https://www.adyashanti.org/' %></li>
+          <li><%= link_to 'Lisa Cairns', 'http://lisacairns.com/' %></li>
+          <li><%= link_to 'Dalai Lama', 'http://www.dalailama.com/' %></li>
+          <li><%= link_to 'Thich Njat Hanh', 'http://plumvillage.org/' %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="small-12 large-4 columns">
+      <h2>Revolutions</h2>
+      <div class="box"><%= image_tag 'BillGates.jpg' %><%= link_to 'Nobody wants to drink toilet water, except Bill Gates', 'http://www.humanosphere.org/global-health/2015/03/nobody-wants-drink-toilet-water-except-bill-gates/', :target => '_blank' %></div>
+      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
+    </div>
+    <div class="small-12 large-4 columns">
+      <h2>Outer</h2>
+      <div class="box"><%= image_tag 'thaipm.jpg' %><%= link_to 'Thailand PM to replace martial law with new restrictions', 'http://www.bbc.com/news/world-asia-32126761', :target => '_blank' %></div>
+      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
     </div>
   </div>
 </main>
