@@ -11,9 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150514225450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "players", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "player_name"
+    t.string   "email"
+    t.integer  "level"
+    t.integer  "exp"
+    t.integer  "influence"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.string   "name"
+    t.text     "rating_def"
+    t.integer  "value"
+    t.integer  "player_id"
+    t.integer  "thought_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "ratings", ["player_id"], name: "index_ratings_on_player_id", using: :btree
+  add_index "ratings", ["thought_id"], name: "index_ratings_on_thought_id", using: :btree
+
+  create_table "thoughts", force: :cascade do |t|
+    t.text     "title"
+    t.text     "thought_href"
+    t.text     "citation"
+    t.integer  "player_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "thoughts", ["player_id"], name: "index_thoughts_on_player_id", using: :btree
+
+  add_foreign_key "ratings", "players"
+  add_foreign_key "ratings", "thoughts"
+  add_foreign_key "thoughts", "players"
 end
