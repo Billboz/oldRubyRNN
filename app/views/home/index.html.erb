@@ -7,19 +7,13 @@
 </header>
 <main>
   <div class="row">
+
+    <%# INNER REVOLUTIONS %>
     <div class="small-12 large-4 columns">
       <h2>Inner</h2>
 
-      <a href="#" data-reveal-id="topicModal"><div class="box"><%= image_tag 'prayer.jpg' %>Prayer - Original Text Messaging</div></a>
-      <div id="topicModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-        <%= image_tag 'prayer.jpg' %>
-        <%= link_to 'Prayer - Original Text Messaging', 'http://www.today.com/news/there-afterlife-does-prayer-work-todays-survey-faith-spirituality-2D80574883', :target => '_blank' %>
-      </div>
+      <a href="http://<%= Player.find(1).thoughts.find(1).thought_href %>"><div class="box"> <%= image_tag 'dog.jpg' %> <%= Player.find(1).thoughts.find(1).title %></div></a>
 
-      <a href="http://<%= Player.find(1).thoughts.find(1).thought_href %>"><div class="box"><%= Player.find(1).thoughts.find(1).title %></div></a>
-
-      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
-      <a href="http://www.yahoo.com" target="_blank"><div class="box">Testing a new idea - link to Yahoo</div></a>
       <div class="topics">
         <h4>Self Help Topics</h4>
         <ul class="no-bullet">
@@ -57,17 +51,17 @@
         </ul>
       </div>
     </div>
+
+    <%# REVOLUTIONS %>
     <div class="small-12 large-4 columns">
       <h2>Revolutions</h2>
-      <div class="box"><%= image_tag 'BillGates.jpg' %><%= link_to 'Nobody wants to drink toilet water, except Bill Gates', 'http://www.humanosphere.org/global-health/2015/03/nobody-wants-drink-toilet-water-except-bill-gates/', :target => '_blank' %></div>
-      <a href="http://<%= Player.first.thoughts.last.thought_href %>"><div class="box"><%= Player.first.thoughts.last.title %></div></a>
-      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
+      <a href="http://<%= Player.first.thoughts.last.thought_href %>"><div class="box"> <%= image_tag 'Drooling_Cat.jpg' %> <%= Player.first.thoughts.last.title %></div></a>
     </div>
+
+    <%# OUTER REVOLUTIONS %>
     <div class="small-12 large-4 columns">
       <h2>Outer</h2>
-      <div class="box"><%= image_tag 'thaipm.jpg' %><%= link_to 'Thailand PM to replace martial law with new restrictions', 'http://www.bbc.com/news/world-asia-32126761', :target => '_blank' %></div>
-      <a href="http://<%= Player.last.thoughts.first.thought_href %>"><div class="box"><%= Player.last.thoughts.first.title %></div></a>
-      <div class="box"><%= link_to 'Patrick Vecchione - Super Genius', 'http://pvecchione.github.io', :target => '_blank' %></div>
+      <a href="http://<%= Player.last.thoughts.first.thought_href %>"><div class="box"> <%= image_tag 'Bill_Murray.jpg' %> <%= Player.last.thoughts.first.title %></div></a>
     </div>
   </div>
 </main>
