@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'initial_thought', to: 'thought#initial_thought'
+
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

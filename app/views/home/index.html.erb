@@ -12,7 +12,7 @@
     <div class="small-12 large-4 columns">
       <h2>Inner</h2>
 
-      <a href="http://<%= Player.find(1).thoughts.find(1).thought_href %>"><div class="box"> <%= image_tag 'dog.jpg' %> <%= Player.find(1).thoughts.find(1).title %></div></a>
+      <a href="<%= initial_thought_path %>"><div class="box"> <%= image_tag 'dog.jpg' %> <%= Player.find(1).thoughts.find(1).title %></div></a>
 
       <div class="topics">
         <h4>Self Help Topics</h4>
